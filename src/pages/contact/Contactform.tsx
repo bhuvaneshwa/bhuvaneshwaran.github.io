@@ -1,3 +1,4 @@
+import Navbar from "@/component/Header/Navbar";
 import React, { useState } from "react";
 
 const ContactForm = () => {
@@ -27,8 +28,10 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-      <h2 className="mb-6 text-3xl font-semibold text-center">Contact Us</h2>
+    <div>
+       <Navbar/>
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto ">
+      <h2 className="mb-6 text-3xl font-semibold text-center text-green-500">Contact Me</h2>
       <div className="mb-4">
         <label htmlFor="name" className="block mb-1 font-medium">
           Name
@@ -39,7 +42,7 @@ const ContactForm = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-3 py-2 border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+          className="w-full px-3 py-2 border-green-500 rounded-md focus:outline-none focus:ring focus:border-blue-500"
           required
         />
       </div>
@@ -53,7 +56,7 @@ const ContactForm = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-3 py-2 border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+          className="w-full px-3 py-2 border-green-500 rounded-md focus:outline-none focus:ring focus:border-blue-500"
           required
         />
       </div>
@@ -67,7 +70,7 @@ const ContactForm = () => {
           name="subject"
           value={formData.subject}
           onChange={handleChange}
-          className="w-full px-3 py-2 border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+          className="w-full px-3 py-2 border-green-500 rounded-md focus:outline-none focus:ring focus:border-green-500"
           required
         />
       </div>
@@ -80,18 +83,20 @@ const ContactForm = () => {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-3 py-2 border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+          className="w-full px-3 py-2 border-green-500 rounded-md focus:outline-none focus:ring focus:border-green-500"
           rows={5}
           required
         />
       </div>
       <button
         type="submit"
-        className="w-full px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"
+        className="w-full px-4 py-2 text-white bg-green-500 rounded-md hover:bg-blue-600"
       >
         Submit
       </button>
     </form>
+    </div>
+   
   );
 };
 
